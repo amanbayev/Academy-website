@@ -3,9 +3,9 @@ export type Locale = (typeof locales)[number];
 
 export const routing = {
   locales,
-  defaultLocale: 'ru' satisfies Locale,
+  defaultLocale: 'ru',
   localePrefix: 'always'
-};
+} as const;
 
 export const localeLabels: Record<Locale, string> = {
   ru: 'RU',
