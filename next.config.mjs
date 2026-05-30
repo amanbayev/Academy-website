@@ -6,6 +6,15 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp']
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/ru',
+        permanent: false
+      }
+    ];
   }
 };
 
