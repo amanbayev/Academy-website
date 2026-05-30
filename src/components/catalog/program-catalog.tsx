@@ -42,8 +42,8 @@ export function ProgramCatalog({programs, locale, labels}: {programs: Program[];
 
   return (
     <div className="grid gap-8 lg:grid-cols-[270px_1fr]">
-      <aside className="rounded-lg border border-academy-border bg-[#fff8fa] p-6">
-        <h2 className="text-lg font-bold">Guidance</h2>
+      <aside className="rounded-lg border border-red-100 bg-[#fff8fa] p-6">
+        <h2 className="text-lg font-bold">AIFC Academy</h2>
         <ol className="mt-5 space-y-4 text-sm text-academy-text">
           <li>1. {labels.area}</li>
           <li>2. {labels.level}</li>

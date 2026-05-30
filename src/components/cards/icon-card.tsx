@@ -19,8 +19,10 @@ export function IconCard({icon = 'chart', title, text, cta}: {icon?: keyof typeo
   const Icon = iconMap[icon];
   return (
     <Card className="group h-full transition hover:-translate-y-1 hover:shadow-soft">
-      <Icon className="h-8 w-8 text-academy-red" aria-hidden />
-      <h3 className="mt-5 text-lg font-bold">{title}</h3>
+      <div className="grid h-11 w-11 place-items-center rounded-md bg-red-50 text-academy-red">
+        <Icon className="h-6 w-6" aria-hidden />
+      </div>
+      <h3 className="mt-5 text-base font-bold leading-6">{title}</h3>
       <p className="mt-3 text-sm leading-6 text-academy-text">{text}</p>
       {cta ? <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-academy-red">{cta}<ArrowRight className="h-4 w-4" /></div> : null}
     </Card>
