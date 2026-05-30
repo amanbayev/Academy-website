@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --academy-red: #d40535;
+  --academy-black: #161719;
+  --academy-text: #5f6368;
+  --academy-border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--academy-black);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(212, 5, 53, 0.14);
+}
+
+.container-page {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.academy-pattern {
+  background-image:
+    radial-gradient(circle at 100% 0%, rgba(212, 5, 53, 0.08), transparent 28%),
+    linear-gradient(135deg, rgba(238, 240, 243, 0.65) 0%, rgba(238, 240, 243, 0) 42%);
+}
+
+.dark-pattern {
+  background:
+    radial-gradient(circle at 92% 18%, rgba(212, 5, 53, 0.18), transparent 22%),
+    radial-gradient(circle at 88% 92%, rgba(255, 255, 255, 0.08), transparent 26%),
+    #111827;
+}

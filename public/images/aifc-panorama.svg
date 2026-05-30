@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="AIFC Astana panoramic visual">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f7f8fb"/><stop offset=".52" stop-color="#e7ecf4"/><stop offset="1" stop-color="#d7e3ef"/></linearGradient>
+    <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#4d6479"/><stop offset="1" stop-color="#132235"/></linearGradient>
+    <radialGradient id="sphere" cx=".35" cy=".3" r=".7"><stop stop-color="#e8f1f8"/><stop offset=".35" stop-color="#7890a2"/><stop offset="1" stop-color="#132235"/></radialGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky)"/>
+  <circle cx="820" cy="260" r="150" fill="url(#sphere)" opacity=".96"/>
+  <path d="M680 270c90 34 190 34 280 0M681 230c90 28 190 28 278 0M710 175c64 24 148 24 214 0" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="4"/>
+  <g fill="url(#glass)">
+    <path d="M120 310h88v260h-88z"/><path d="M230 230h112v340H230z"/><path d="M380 280h100v290H380z"/>
+    <path d="M968 250h88v320h-88z"/><path d="M1085 340h70v230h-70z"/>
+  </g>
+  <g fill="#fff" opacity=".18">
+    <path d="M250 260h70v280h-70z"/><path d="M400 310h56v230h-56z"/><path d="M990 280h44v260h-44z"/>
+  </g>
+  <path d="M0 575h1200v145H0z" fill="#edf0f5"/>
+  <path d="M80 600c230-32 405-30 650 8 150 23 270 20 410-7" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round"/>
+  <path d="M0 720V596c182 19 332 41 520 76 230 42 420 28 680-40v88z" fill="#ffffff" opacity=".72"/>
+</svg>
