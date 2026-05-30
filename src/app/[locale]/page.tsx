@@ -81,14 +81,7 @@ export default async function HomePage({params}: {params: {locale: Locale}}) {
         </div>
       </section>
 
-      <ScrollParallaxBrand
-        label={t('parallaxLabel')}
-        title={t('parallaxTitle')}
-        text={t('parallaxText')}
-        primary={t('parallaxPrimary')}
-        secondary={t('parallaxSecondary')}
-        href={`/${locale}/programs`}
-      />
+      <ScrollParallaxBrand />
 
       <section className="container-page grid border-b border-academy-border bg-white md:grid-cols-2 lg:grid-cols-4">
         {audienceCards.map((card) => {

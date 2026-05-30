@@ -63,12 +63,6 @@ textarea {
     #111827;
 }
 
-.parallax-brand-copy {
-  opacity: calc(0.96 - (var(--parallax-progress) * 0.22));
-  transform: translate3d(0, calc((0.5 - var(--parallax-progress)) * 52px), 0);
-  will-change: transform, opacity;
-}
-
 .parallax-brand-video {
   filter: saturate(1.05) contrast(1.04);
   transform: scale(calc(1.04 + (var(--parallax-progress) * 0.08)));
@@ -82,7 +76,6 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .parallax-brand-copy,
   .parallax-brand-video,
   .parallax-brand-progress > div {
     opacity: 1;
