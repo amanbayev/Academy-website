@@ -62,3 +62,63 @@ textarea {
     radial-gradient(circle at 88% 92%, rgba(255, 255, 255, 0.08), transparent 26%),
     #111827;
 }
+
+.parallax-brand-media {
+  opacity: calc(0.72 + (var(--parallax-progress) * 0.28));
+  transform:
+    translate3d(0, calc((0.5 - var(--parallax-progress)) * 88px), 0)
+    scale(calc(0.84 + (var(--parallax-progress) * 0.24)));
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.parallax-brand-copy {
+  opacity: calc(1 - (var(--parallax-progress) * 0.18));
+  transform: translate3d(0, calc(var(--parallax-progress) * -34px), 0);
+  will-change: transform, opacity;
+}
+
+.parallax-brand-stage {
+  transform: translate3d(0, calc(var(--parallax-progress) * -24px), 0);
+  will-change: transform;
+}
+
+.parallax-orbit {
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  transform: rotate(calc(var(--parallax-progress) * 18deg)) scale(calc(0.94 + (var(--parallax-progress) * 0.08)));
+}
+
+.parallax-orbit-one {
+  border-color: rgba(212, 5, 53, 0.28);
+}
+
+.parallax-orbit-two {
+  inset: 4% 0;
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: rotate(calc(var(--parallax-progress) * -14deg)) scale(calc(1.02 - (var(--parallax-progress) * 0.08)));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-brand-media,
+  .parallax-brand-copy,
+  .parallax-brand-stage,
+  .parallax-orbit,
+  .parallax-orbit-two {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+
+  .parallax-brand {
+    height: auto;
+  }
+
+  .parallax-brand > div {
+    position: relative;
+    min-height: auto;
+    padding: 80px 0;
+  }
+}

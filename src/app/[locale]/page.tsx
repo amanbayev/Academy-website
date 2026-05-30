@@ -14,6 +14,7 @@ import {
   UserRound,
   UsersRound
 } from 'lucide-react';
+import {ScrollParallaxBrand} from '@/components/sections/scroll-parallax-brand';
 import {learningAreas, news, programs} from '@/content/getters';
 import type {Locale} from '@/i18n/routing';
 import {localizedMetadata} from '@/lib/seo';
@@ -79,6 +80,15 @@ export default async function HomePage({params}: {params: {locale: Locale}}) {
           </div>
         </div>
       </section>
+
+      <ScrollParallaxBrand
+        label={t('parallaxLabel')}
+        title={t('parallaxTitle')}
+        text={t('parallaxText')}
+        primary={t('parallaxPrimary')}
+        secondary={t('parallaxSecondary')}
+        href={`/${locale}/programs`}
+      />
 
       <section className="container-page grid border-b border-academy-border bg-white md:grid-cols-2 lg:grid-cols-4">
         {audienceCards.map((card) => {
@@ -148,7 +158,7 @@ export default async function HomePage({params}: {params: {locale: Locale}}) {
                 <Image src={program.image} alt="" fill className="object-cover" />
               </div>
               <div className="p-5">
-                <span className="rounded-md bg-academy-soft px-2 py-1 text-xs font-bold text-academy-text">{program.duration[locale]} · {program.language}</span>
+                <span className="rounded-md bg-academy-soft px-2 py-1 text-xs font-bold text-academy-text">{program.duration[locale]} - {program.language}</span>
                 <h3 className="mt-4 min-h-14 text-base font-extrabold leading-6">{program.title[locale]}</h3>
                 <p className="mt-2 line-clamp-2 text-sm leading-6 text-academy-text">{program.shortDescription[locale]}</p>
                 <a href={`/${locale}/programs/${program.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-academy-red">
@@ -204,7 +214,7 @@ export default async function HomePage({params}: {params: {locale: Locale}}) {
                   <Image src={item.image} alt="" fill className="object-cover" />
                 </div>
                 <div className="p-4">
-                  <span className="text-xs font-bold uppercase text-academy-red">{item.category[locale]} · {formatDate(item.date, locale)}</span>
+                  <span className="text-xs font-bold uppercase text-academy-red">{item.category[locale]} - {formatDate(item.date, locale)}</span>
                   <h3 className="mt-3 text-sm font-extrabold leading-5">{item.title[locale]}</h3>
                   <a href={`/${locale}/news`} className="mt-4 inline-flex text-xs font-bold text-academy-red">{common('readMore')} <ArrowRight className="ml-2 h-3 w-3" /></a>
                 </div>
@@ -213,7 +223,7 @@ export default async function HomePage({params}: {params: {locale: Locale}}) {
           </div>
         </div>
         <div className="rounded-lg border border-academy-border bg-white p-6">
-          <div className="text-5xl font-extrabold text-academy-red">“</div>
+          <div className="text-5xl font-extrabold text-academy-red">&ldquo;</div>
           <p className="text-lg font-bold leading-7">{t('quote')}</p>
           <div className="mt-6 flex items-center gap-4">
             <Image src="/images/portrait-1.svg" alt="" width={56} height={56} className="rounded-full" />
